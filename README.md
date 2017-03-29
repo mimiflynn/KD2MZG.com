@@ -1,10 +1,3 @@
-# gatsby-starter-default
-The default Gatsby starter
+# KD2MZG.com
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Kilo Delta Two Mike Zulu Golf - Radio adventures

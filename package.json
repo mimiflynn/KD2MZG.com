@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "KD2MZG",
+  "description": "Adventures in Ham Radio",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mimi Flynn",
   "dependencies": {
     "front-matter": "^2.1.2",
     "gatsby": "^0.12.36",
@@ -35,7 +35,7 @@
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-links && gh-pages -d public",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

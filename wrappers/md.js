@@ -1,24 +1,47 @@
 import React from 'react'
-import 'css/markdown-styles.css'
-import Helmet from 'react-helmet'
+import moment from 'moment'
+import Helmet from "react-helmet"
+import ReadNext from '../components/ReadNext'
+import { rhythm } from 'utils/typography'
 import { config } from 'config'
+import Bio from 'components/Bio'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      router: React.PropTypes.object,
-    }
-  },
+import '../css/zenburn.css'
+
+class MarkdownWrapper extends React.Component {
   render () {
-    const post = this.props.route.page.data
+    const { route } = this.props
+    const post = route.page.data
+
     return (
       <div className="markdown">
         <Helmet
-          title={`${config.siteTitle} | ${post.title}`}
+          title={`${post.title} | ${config.blogTitle}`}
         />
-        <h1>{post.title}</h1>
+        <h1 style={{marginTop: 0}}>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
+        <em
+          style={{
+            display: 'block',
+            marginBottom: rhythm(2),
+          }}
+        >
+          Posted {moment(post.date).format('MMMM D, YYYY')}
+        </em>
+        <hr
+          style={{
+            marginBottom: rhythm(2),
+          }}
+        />
+        <ReadNext post={post} pages={route.pages} />
+        <Bio />
       </div>
     )
-  },
-})
+  }
+}
+
+MarkdownWrapper.propTypes = {
+  route: React.PropTypes.object,
+}
+
+export default MarkdownWrapper

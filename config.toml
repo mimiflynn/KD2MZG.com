@@ -1,2 +1,3 @@
-siteTitle="KD2MZG - Adventures in Ham Radio"
-linkPrefix = "/gatsby-starter-default"
+blogTitle = "KD2MZG - Adventures in Ham Radio"
+authorName = "Mimi Flynn"
+linkPrefix = "/gatsby-starter-blog"

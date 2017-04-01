@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router'
+import moment from 'moment'
 import sortBy from 'lodash/sortBy'
 import get from 'lodash/get'
 import { prefixLink } from 'gatsby-helpers'
 import { rhythm } from 'utils/typography'
-import Helmet from "react-helmet"
+import Helmet from 'react-helmet'
 import { config } from 'config'
 import include from 'underscore.string/include'
 import Bio from 'components/Bio'
@@ -27,20 +28,36 @@ class BlogIndex extends React.Component {
           ]}
         />
         <Bio />
-        <ul>
-          {visiblePages.map((page) => (
-              <li
-                key={page.path}
+        {visiblePages.map((page) => (
+            <p
+              key={page.path}
+              style={{
+                  marginBottom: rhythm(1/4)
+              }}
+            >
+              <h2>
+                <Link
+                  style={{
+                    boxShadow: 'none',
+                    color: 'black',
+                    textDecoration: 'none'
+                  }}
+                  to={prefixLink(page.path)}
+                >
+                  {get(page, 'data.title', page.path)}
+                </Link>
+              </h2>
+              <em
                 style={{
-                    marginBottom: rhythm(1/4),
+                  display: 'block',
+                  marginBottom: rhythm(1),
                 }}
               >
-                <Link style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
-                    {get(page, 'data.title', page.path)}
-                </Link>
-              </li>
-          ))}
-        </ul>
+                Posted {moment(page.data.date).format('MMMM D, YYYY')}
+              </em>
+              <div dangerouslySetInnerHTML={{__html: page.data.body}}/>
+            </p>
+        ))}
       </div>
     )
   }

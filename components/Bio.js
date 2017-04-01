@@ -11,7 +11,7 @@ class Bio extends React.Component {
           marginBottom: rhythm(2.5),
         }}
       >
-        <img
+        <a href="https://twitter.com/mimiflynn"><img
           src={profilePic}
           alt={`author ${config.authorName}`}
           style={{
@@ -21,8 +21,8 @@ class Bio extends React.Component {
             width: rhythm(2),
             height: rhythm(2),
           }}
-        />
-        Written by <strong>{config.authorName}</strong>, a UI engineer in New York City. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
+        /></a>
+        Written by <strong>{config.authorName}</strong>, a UI engineer in New York City.
       </p>
     )
   }

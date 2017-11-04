@@ -1,7 +1,8 @@
 ---
 title: MD-380
-date: "2017-04-02T22:12:03.284Z"
-path: "/md-380/"
+author: mimiflynn
+date: 2017-04-02 18:36
+template: article.jade
 ---
 
 ## Programming with Windows VM

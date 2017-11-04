@@ -1,8 +1,11 @@
 ---
 title: FLDigi on macOS
-date: "2017-06-03T22:12:03.284Z"
-path: "/fldigi-mac/"
+author: mimiflynn
+date: 2017-06-03 18:36
+template: article.jade
 ---
+
+
 
 https://www.machamradio.com/blog/category/fldigi/
 

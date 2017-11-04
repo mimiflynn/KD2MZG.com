@@ -1,34 +1,8 @@
 {
-  "name": "KD2MZG",
-  "description": "Adventures in Ham Radio",
-  "version": "1.0.0",
-  "author": "Mimi Flynn",
   "dependencies": {
-    "gatsby": "^0.12.36",
-    "lodash": "^4.17.2",
-    "moment": "^2.17.1",
-    "react-addons-shallow-compare": "^15.4.1",
-    "react-dates": "^4.1.0",
-    "react-helmet": "^3.2.2",
-    "react-responsive-grid": "^0.3.3",
-    "react-typography": "^0.15.0",
-    "typography": "^0.15.0",
-    "typography-theme-wordpress-2016": "^0.15.0",
-    "underscore.string": "^3.2.3"
+    "moment": "2.3.x",
+    "underscore": "1.4.x",
+    "typogr": "0.5.x"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:mimiflynn/KD2MZG.com.git"
-  },
-  "scripts": {
-    "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gatsby build"
-  }
+  "private": "true"
 }

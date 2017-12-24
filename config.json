@@ -1,9 +1,9 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
-    "name": "The Wintersmith's blog",
+    "url": "https://KD2MZG.com",
+    "name": "KD2MZG",
     "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "description": "Radio things"
   },
   "plugins": [
     "./plugins/paginator.coffee"

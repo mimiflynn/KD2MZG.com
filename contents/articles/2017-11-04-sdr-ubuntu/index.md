@@ -1,9 +1,11 @@
 ---
 title: SDR with Ubuntu
 author: mimiflynn
-date: 2017-04-01 18:36
+date: 2017-11-04 18:36
 template: article.jade
 ---
+
+Notes from installing SDR tools on Ubuntu.
 
 ## HackRF
 

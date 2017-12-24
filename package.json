@@ -1,8 +1,13 @@
 {
   "dependencies": {
-    "moment": "2.3.x",
+    "moment": "^2.20.1",
     "underscore": "1.4.x",
     "typogr": "0.5.x"
   },
-  "private": "true"
+  "private": "true",
+  "scripts": {
+    "clean": "rm -rf docs",
+    "dev": "wintersmith preview",
+    "build": "wintersmith build && mv build docs && cp CNAME docs/CNAME"
+  }
 }

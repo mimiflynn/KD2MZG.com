@@ -5,7 +5,8 @@ date: 2017-11-04 18:36
 template: article.jade
 ---
 
-Notes from installing SDR tools on Ubuntu.
+Useful links and notes from installing SDR tools on Ubuntu. Focused on the HackRF and RTL-SDR USB dongles.
+
 
 ## HackRF
 

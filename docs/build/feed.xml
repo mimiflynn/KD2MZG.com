@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KD2MZG</title>
+    <atom:link href="https://KD2MZG.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>https://KD2MZG.com</link>
+    <description>Radio things</description>
+    <pubDate>Sat, 30 Dec 2017 10:36:00 -0500</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Ah, 2017, what a year...</title>
+      <link>https://KD2MZG.com/articles/2017-12-30-goals/</link>
+      <pubDate>Sat, 30 Dec 2017 10:36:00 -0500</pubDate>
+      <guid isPermaLink="true">https://KD2MZG.com/articles/2017-12-30-goals/</guid>
+      <author></author>
+      <description>&lt;p&gt;The end of this crazy year has finally come. What a ride. This year, I have a few accomplishments of note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Technician amateur radio license&lt;/li&gt;
+&lt;li&gt;Learned to sail&lt;/li&gt;
+&lt;li&gt;Motorcycle license&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next year, I plan to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amateur Extra license&lt;/li&gt;
+&lt;li&gt;Learn morse code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ve3bux.com/?page_id=501&quot;&gt;Configure an Ardiuno to talk to my FT-857D&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DX contacts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sota.org.uk/&quot;&gt;SOTA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Learn more about microcontrollers&lt;/li&gt;
+&lt;li&gt;Build an amp&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://greatscottgadgets.com/sdr/&quot;&gt;HackRF lessons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;probably random stuff I never thought of because radio is cool like that&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Through adventures in radio, this year I became more comfortable building software from source code, using Linux full time, and talking about my tech knowledge. The last point is an interesting development since I’ve worked as a developer for almost my entire adult life. I rarely spoke to people about my tech projects outside of work (aka in my comfort zone with people I know), but the community around radio is really nice and encouraging of communication. Since we are all amateurs, we are all learning how we can and are at different levels of knowledge. I will always need to work on talking about tech, as its easy to come off as snobby in this field, and I’m happy to be around good encouraging people.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>SDR with Ubuntu</title>
+      <link>https://KD2MZG.com/articles/2017-11-04-sdr-ubuntu/</link>
+      <pubDate>Sat, 04 Nov 2017 18:36:00 -0400</pubDate>
+      <guid isPermaLink="true">https://KD2MZG.com/articles/2017-11-04-sdr-ubuntu/</guid>
+      <author></author>
+      <description>&lt;p&gt;Useful links and notes from installing SDR tools on Ubuntu. Focused on the HackRF and RTL-SDR USB dongles.&lt;/p&gt;
+&lt;h2 id=&quot;hackrf&quot;&gt;HackRF&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mossmann/hackrf/tree/master/host&quot;&gt;https://github.com/mossmann/hackrf/tree/master/host&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;gnuradio-companion&quot;&gt;GnuRadio Companion&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.gnuradio.org/index.php/InstallingGRFromSource#Using-the-build-gnuradio-script&quot;&gt;https://wiki.gnuradio.org/index.php/InstallingGRFromSource#Using-the-build-gnuradio-script&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;cubicsdr&quot;&gt;CubicSDR&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://cubicsdr.com/&quot;&gt;http://cubicsdr.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/cjcliffe/CubicSDR&quot;&gt;https://github.com/cjcliffe/CubicSDR&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;source&quot;&gt;Source&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/cjcliffe/CubicSDR/wiki/Build-Linux&quot;&gt;https://github.com/cjcliffe/CubicSDR/wiki/Build-Linux&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install libpulse-dev libgtk-3-dev
+sudo apt-get install freeglut3 freeglut3-dev
+sudo apt-get install automake
+
+git clone https://github.com/pothosware/SoapySDR.git
+cd SoapySDR
+mkdir build
+cd build
+cmake ../ -DCMAKE_BUILD_TYPE=Release
+make -j4
+sudo make install
+sudo ldconfig
+SoapySDRUtil --info #test SoapySDR install
+
+git clone https://github.com/jgaeddert/liquid-dsp
+cd liquid-dsp
+./bootstrap.sh
+CFLAGS=&amp;quot;-march=native -O3&amp;quot; ./configure --enable-fftoverride 
+make -j4
+sudo make install
+sudo ldconfig
+
+wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.0/wxWidgets-3.1.0.tar.bz2
+tar -xvjf wxWidgets-3.1.0.tar.bz2  
+cd wxWidgets-3.1.0/
+mkdir -p ~/Develop/wxWidgets-staticlib
+./autogen.sh
+./configure --with-opengl --disable-shared --enable-monolithic --with-libjpeg --with-libtiff --with-libpng --with-zlib --disable-sdltest --enable-unicode --enable-display --enable-propgrid --disable-webkit --disable-webview --disable-webviewwebkit --prefix=`echo ~/Develop/wxWidgets-staticlib` CXXFLAGS=&amp;quot;-std=c++0x&amp;quot;
+make -j4 &amp;amp;&amp;amp; make install
+
+
+git clone https://github.com/cjcliffe/CubicSDR.git
+cd CubicSDR
+mkdir build
+cd build
+cmake ../ -DCMAKE_BUILD_TYPE=Release -DwxWidgets_CONFIG_EXECUTABLE=~/Develop/wxWidgets-staticlib/bin/wx-config
+make
+cd x64/
+./CubicSDR
+sudo make install
+
+sudo apt-get install librtlsdr-dev
+git clone https://github.com/pothosware/SoapyRTLSDR.git
+cd SoapyRTLSDR
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make
+sudo make install
+sudo ldconfig
+# should now show RTL-SDR device if connected
+SoapySDRUtil --probe
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;flatpack&quot;&gt;flatpack&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:alexlarsson/flatpak
+sudo apt update
+sudo apt install flatpak
+wget https://sdk.gnome.org/keys/gnome-sdk.gpg
+sudo flatpak remote-add --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
+flatpak install --bundle CubicSDR-0.2.0.flatpak
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;to run&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;flatpak run com.cubicsdr.App
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;gqrx&quot;&gt;GQRX&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://gqrx.dk/download/install-ubuntu&quot;&gt;http://gqrx.dk/download/install-ubuntu&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository -y ppa:bladerf/bladerf
+sudo add-apt-repository -y ppa:ettusresearch/uhd
+sudo add-apt-repository -y ppa:myriadrf/drivers
+sudo add-apt-repository -y ppa:myriadrf/gnuradio
+sudo add-apt-repository -y ppa:gqrx/gqrx-sdr
+sudo apt-get update
+sudo apt-get install gqrx-sdr
+sudo apt-get install libvolk1-bin
+volk_profile
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Listening</title>
+      <link>https://KD2MZG.com/articles/2017-04-01-listening/</link>
+      <pubDate>Sat, 01 Apr 2017 18:36:00 -0400</pubDate>
+      <guid isPermaLink="true">https://KD2MZG.com/articles/2017-04-01-listening/</guid>
+      <author></author>
+      <description>&lt;p&gt;I recently earned my technicians license and immediately purchased my new shiny callsign as a domain name. Currently, I’m not so much making QSO’s as much as listening to familiarize myself with NYC area repeaters.&lt;/p&gt;
+&lt;p&gt;I intend to post what I learn as a ham in this space, which, so far, is how to build software from source on Linux machines and the trials of programming various radios ;)&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>

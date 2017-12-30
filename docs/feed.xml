@@ -5,16 +5,43 @@
     <atom:link href="https://KD2MZG.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://KD2MZG.com</link>
     <description>Radio things</description>
-    <pubDate>Sat, 04 Nov 2017 18:36:00 -0400</pubDate>
+    <pubDate>Sat, 30 Dec 2017 10:36:00 -0500</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Ah, 2017, what a year...</title>
+      <link>https://KD2MZG.com/articles/2017-12-30-goals/</link>
+      <pubDate>Sat, 30 Dec 2017 10:36:00 -0500</pubDate>
+      <guid isPermaLink="true">https://KD2MZG.com/articles/2017-12-30-goals/</guid>
+      <author></author>
+      <description>&lt;p&gt;The end of this crazy year has finally come. What a ride. This year, I have a few accomplishments of note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Technician amateur radio license&lt;/li&gt;
+&lt;li&gt;Learned to sail&lt;/li&gt;
+&lt;li&gt;Motorcycle license&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next year, I plan to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amateur Extra license&lt;/li&gt;
+&lt;li&gt;Learn morse code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ve3bux.com/?page_id=501&quot;&gt;Configure an Ardiuno to talk to my FT-857D&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DX contacts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sota.org.uk/&quot;&gt;SOTA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Learn more about microcontrollers&lt;/li&gt;
+&lt;li&gt;Build an amp&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://greatscottgadgets.com/sdr/&quot;&gt;HackRF lessons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;probably random stuff I never thought of because radio is cool like that&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Through adventures in radio, this year I became more comfortable building software from source code, using Linux full time, and talking about my tech knowledge. The last point is an interesting development since I’ve worked as a developer for almost my entire adult life. I rarely spoke to people about my tech projects outside of work (aka in my comfort zone with people I know), but the community around radio is really nice and encouraging of communication. Since we are all amateurs, we are all learning how we can and are at different levels of knowledge. I will always need to work on talking about tech, as its easy to come off as snobby in this field, and I’m happy to be around good encouraging people.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>SDR with Ubuntu</title>
       <link>https://KD2MZG.com/articles/2017-11-04-sdr-ubuntu/</link>
       <pubDate>Sat, 04 Nov 2017 18:36:00 -0400</pubDate>
       <guid isPermaLink="true">https://KD2MZG.com/articles/2017-11-04-sdr-ubuntu/</guid>
       <author></author>
-      <description>&lt;p&gt;Notes from installing SDR tools on Ubuntu.&lt;/p&gt;
+      <description>&lt;p&gt;Useful links and notes from installing SDR tools on Ubuntu. Focused on the HackRF and RTL-SDR USB dongles.&lt;/p&gt;
 &lt;h2 id=&quot;hackrf&quot;&gt;HackRF&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/mossmann/hackrf/tree/master/host&quot;&gt;https://github.com/mossmann/hackrf/tree/master/host&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;gnuradio-companion&quot;&gt;GnuRadio Companion&lt;/h2&gt;

@@ -14,7 +14,7 @@ html(lang='en')
         block title
           = locals.name
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
+      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
       link(rel='stylesheet', href=contents.css['main.css'].url)
   body(class=bodyclass)
     header.header
@@ -27,7 +27,7 @@ html(lang='en')
     div#content
       div.content-wrap
         block content
-          h2 Welcome to zombocom!
+          h2 Welcome to locals.name!
     footer
       div.content-wrap
         block footer
@@ -37,3 +37,5 @@ html(lang='en')
             p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
               a(href='https://github.com/jnordberg/wintersmith') Wintersmith
               //- please leave the "powered by" if you use the design
+    script(type='application/javascript', src=locals.url+'/js/ga.js')
+    script(type='application/javascript', src=locals.url+'/js/game.js')

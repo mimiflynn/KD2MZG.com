@@ -3,11 +3,11 @@
     Animation of the top border of the page. Used on the body tag.
 */
 @keyframes borderChange {
-    0% {color: #D14319;}
-    25% {color: #FF8B19;}
-    50% {color: #FFCC00;}
-    75% {color: #67A97C;}
-    100% {color: #49AFB5;}
+    0% {border: #D14319;}
+    25% {border: #FF8B19;}
+    50% {border: #FFCC00;}
+    75% {border: #67A97C;}
+    100% {border: #49AFB5;}
 }
 
 

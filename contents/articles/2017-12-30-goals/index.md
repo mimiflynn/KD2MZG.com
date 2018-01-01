@@ -3,6 +3,7 @@ title: Ah, 2017, what a year...
 author: mimiflynn
 date: 2017-12-30 10:36
 template: article.jade
+summary: Year end summary and 2018 goals.
 ---
 
 The end of this crazy year has finally come. What a ride. This year, I have a few accomplishments of note:

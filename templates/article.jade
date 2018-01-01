@@ -1,6 +1,13 @@
 
 extends layout
 
+block append twitter
+  meta(name='twitter:title', content=locals.name + ' | ' + page.title)
+  if page.metadata.summary
+    meta(name='twitter:description', content=page.metadata.summary)
+  else
+    meta(name='twitter:description', content=page.intro)
+
 block append vars
   - bodyclass = 'article-detail'
 

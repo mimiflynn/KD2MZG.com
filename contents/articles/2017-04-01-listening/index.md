@@ -3,6 +3,7 @@ title: Listening
 author: mimiflynn
 date: 2017-04-01 18:36
 template: article.jade
+summary: Just getting started
 ---
 
 

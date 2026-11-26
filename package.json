@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "moment": "^2.20.1",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x"
+    "moment": "^2.31.0",
+    "typogr": "^0.6.8",
+    "underscore": "^1.13.8"
   },
   "private": "true",
   "scripts": {

@@ -1,0 +1,28 @@
+---
+permalink: /feed.xml
+eleventyImport:
+  collections: ["articles"]
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }}</title>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description }}</description>
+    <pubDate>{{ collections.articles[0].date | rfc822 }}</pubDate>
+    <generator>Eleventy - https://www.11ty.dev</generator>
+    <language>en</language>
+    {%- for article in collections.articles %}
+    {%- set permalink = site.url + article.url %}
+    <item>
+      <title>{{ article.data.title }}</title>
+      <link>{{ permalink }}</link>
+      <pubDate>{{ article.date | rfc822 }}</pubDate>
+      <guid isPermaLink="true">{{ permalink }}</guid>
+      <description>{{ article.content | resolveUrls(article.url, site.url) }}</description>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

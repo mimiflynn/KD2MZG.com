@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mimiflynn">
+    {%- block twitter %}{% endblock %}
+    <title>{% block title %}{{ site.name }}{% endblock %}</title>
+    <link rel="alternate" href="{{ site.url }}/feed.xml" type="application/rss+xml" title="{{ site.description }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body{% block bodyclass %}{% endblock %}>
+    <header class="header">
+      <div class="content-wrap">
+        {%- block header %}
+        <div class="logo">
+          <h1><a href="{{ site.url }}">{{ site.name }}</a></h1>
+          <p class="description">{{ site.description }}</p>
+        </div>
+        {%- endblock %}
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        {%- block content %}{% endblock %}
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        {%- block nav %}{% endblock %}
+        <section class="about">
+          {{ about | safe }}
+        </section>
+        <section class="copy">
+          <p>&copy; {% year %} {{ site.owner }} &mdash; powered by&nbsp;<a href="https://www.11ty.dev">Eleventy</a></p>
+        </section>
+      </div>
+    </footer>
+    <script type="application/javascript" src="{{ site.url }}/js/ga.js"></script>
+    <script type="application/javascript" src="{{ site.url }}/js/game.js"></script>
+  </body>
+</html>

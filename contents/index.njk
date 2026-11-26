@@ -1,0 +1,37 @@
+---
+pagination:
+  data: collections.articles
+  size: 3
+permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+eleventyImport:
+  collections: ["articles"]
+eleventyExcludeFromCollections: true
+---
+{%- extends "layout.njk" %}
+
+{%- block content %}
+        {%- for article in pagination.items %}
+        {%- set html = article.content | resolveUrls(article.url) %}
+        {%- set intro = html | intro %}
+        <article class="article intro">
+          <header>
+            <p class="date"><span>{{ article.date | displayDate }}</span></p>
+            <h2><a href="{{ article.url }}">{{ article.data.title }}</a></h2>
+          </header>
+          <section class="content">
+            {{ intro | typogrify | safe }}
+            {%- if html.length > intro.length %}
+            <p class="more"><a href="{{ article.url }}">more</a></p>
+            {%- endif %}
+          </section>
+        </article>
+        {%- endfor %}
+{%- endblock %}
+
+{%- block nav %}
+        <div class="nav">
+          {%- if pagination.href.previous %}<a href="{{ pagination.href.previous }}">« Newer</a>
+          {%- else %}<a href="/archive.html">« Archives</a>{% endif %}
+          {%- if pagination.href.next %}<a href="{{ pagination.href.next }}">Next page »</a>{% endif %}
+        </div>
+{%- endblock %}

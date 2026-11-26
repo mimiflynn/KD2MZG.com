@@ -1,0 +1,33 @@
+---
+permalink: /archive.html
+eleventyImport:
+  collections: ["articles"]
+eleventyExcludeFromCollections: true
+---
+{%- extends "layout.njk" %}
+{%- set lineHeight = 2.2 %}
+
+{%- block content %}
+        <section class="archive">
+          <h2>Archive</h2>
+          <ul>
+            {%- for year in collections.articles | archive %}
+            <li>
+              <span class="year-label" style="line-height:{{ lineHeight * year.count }}em">{{ year.year }}</span>
+              <ul style="margin-left:4em">
+                {%- for month in year.months %}
+                <li>
+                  <span class="month-label" style="line-height:{{ lineHeight * month.articles.length }}em">{{ month.name }}</span>
+                  <ul style="margin-left:7em">
+                    {%- for article in month.articles %}
+                    <li style="height:{{ lineHeight }}em;line-height:{{ lineHeight }}em"><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+                    {%- endfor %}
+                  </ul>
+                </li>
+                {%- endfor %}
+              </ul>
+            </li>
+            {%- endfor %}
+          </ul>
+        </section>
+{%- endblock %}

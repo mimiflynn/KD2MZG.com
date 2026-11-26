@@ -8,8 +8,7 @@
     <meta name="twitter:site" content="@mimiflynn">
     <meta name="twitter:title" content="KD2MZG | SDR with Ubuntu">
     <meta name="twitter:description" content="Notes and links for installing SDR tools on Ubuntu. Focused on HackRD and RTL-SDR.">
-    <title>SDR with Ubuntu - KD2MZG
-    </title>
+    <title>SDR with Ubuntu - KD2MZG</title>
     <link rel="alternate" href="https://KD2MZG.com/feed.xml" type="application/rss+xml" title="Radio things">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="/css/main.css">
@@ -18,17 +17,17 @@
     <header class="header">
       <div class="content-wrap">
         <h1>SDR with Ubuntu</h1>
-        <p class="author">Written by <span class="author">mimiflynn</span>
-        </p>
+        <p class="author">Written by <span class="author">mimiflynn</span></p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>Useful links and notes from installing <span class="caps">SDR</span> tools on Ubuntu. Focused on the HackRF and RTL-SDR USB&nbsp;dongles.</p>
+          <section class="content">
+            <p>Useful links and notes from installing <span class="caps">SDR</span> tools on Ubuntu. Focused on the HackRF and <span class="caps">RTL</span>-<span class="caps">SDR</span> <span class="caps">USB</span><span class="widont">&nbsp;</span>dongles.</p>
 <h2 id="hackrf">HackRF</h2>
 <p><a href="https://github.com/mossmann/hackrf/tree/master/host">https://github.com/mossmann/hackrf/tree/master/host</a></p>
-<h2 id="gnuradio-companion">GnuRadio&nbsp;Companion</h2>
+<h2 id="gnuradio-companion">GnuRadio Companion</h2>
 <p><a href="https://wiki.gnuradio.org/index.php/InstallingGRFromSource#Using-the-build-gnuradio-script">https://wiki.gnuradio.org/index.php/InstallingGRFromSource#Using-the-build-gnuradio-script</a></p>
 <h2 id="cubicsdr">CubicSDR</h2>
 <p><a href="http://cubicsdr.com/">http://cubicsdr.com/</a></p>
@@ -87,16 +86,19 @@ sudo make install
 sudo ldconfig
 # should now show RTL-SDR device if connected
 SoapySDRUtil --probe
-</code></pre><h3 id="flatpack">flatpack</h3>
+</code></pre>
+<h3 id="flatpack">flatpack</h3>
 <pre><code>sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 sudo flatpak remote-add --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
 flatpak install --bundle CubicSDR-0.2.0.flatpak
-</code></pre><p>to&nbsp;run</p>
+</code></pre>
+<p>to run</p>
 <pre><code>flatpak run com.cubicsdr.App
-</code></pre><h2 id="gqrx"><span class="caps">GQRX</span></h2>
+</code></pre>
+<h2 id="gqrx"><span class="caps">GQRX</span></h2>
 <p><a href="http://gqrx.dk/download/install-ubuntu">http://gqrx.dk/download/install-ubuntu</a></p>
 <pre><code>sudo add-apt-repository -y ppa:bladerf/bladerf
 sudo add-apt-repository -y ppa:ettusresearch/uhd
@@ -107,26 +109,27 @@ sudo apt-get update
 sudo apt-get install gqrx-sdr
 sudo apt-get install libvolk1-bin
 volk_profile
-</code></pre></section>
+</code></pre>
+
+          </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="/">&laquo; Full blog</a></div>
-        <section class="about"><p>This site was made by me, <a href="https://mimiflynn.com">Mimi Flynn</a>, with <a href="http://wintersmith.io">Wintersmith</a>.</p>
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about">
+          <p>This site was made by me, <a href="https://mimiflynn.com">Mimi Flynn</a>, with <a href="https://www.11ty.dev">Eleventy</a>.</p>
 <p>I’m a software engineer living in NYC. I enjoy rock climbing, camping, cycling, music, and driving long distances across the country.</p>
 <p>None of the links on this site are affiliate links. Buy where you want. I just want to share a few of my favorite things.</p>
 <p>If your interested in checking out everything I’ve ever read on the internet go to <a href="http://pulleyandrope.com">PulleyAndRope</a> or check out my more curated media interests at <a href="https://supercoolneato.com">SuperCoolNeato</a>.</p>
 
         </section>
         <section class="copy">
-          <p>&copy; 2018 Someone &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
-          </p>
+          <p>&copy; 2026 Someone &mdash; powered by&nbsp;<a href="https://www.11ty.dev">Eleventy</a></p>
         </section>
       </div>
     </footer>
-    <script type="application/javascript" src="https://KD2MZG.com/js/ga.js"></script>
     <script type="application/javascript" src="https://KD2MZG.com/js/game.js"></script>
   </body>
 </html>

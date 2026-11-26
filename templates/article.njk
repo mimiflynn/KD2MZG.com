@@ -1,0 +1,30 @@
+{%- extends "layout.njk" %}
+{%- set html = content | resolveUrls(page.url) %}
+
+{%- block twitter %}
+    <meta name="twitter:title" content="{{ site.name }} | {{ title }}">
+    <meta name="twitter:description" content="{{ summary or (html | intro) }}">
+{%- endblock %}
+
+{%- block title %}{{ title }} - {{ site.name }}{% endblock %}
+
+{%- block bodyclass %} class="article-detail"{% endblock %}
+
+{%- block header %}
+        <h1>{{ title }}</h1>
+        {%- if author %}
+        <p class="author">Written by <span class="author">{{ author }}</span></p>
+        {%- endif %}
+{%- endblock %}
+
+{%- block content %}
+        <article class="article">
+          <section class="content">
+            {{ html | typogrify | safe }}
+          </section>
+        </article>
+{%- endblock %}
+
+{%- block nav %}
+        <div class="nav"><a href="/">« Full blog</a></div>
+{%- endblock %}

@@ -5,15 +5,14 @@
     <atom:link href="https://KD2MZG.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://KD2MZG.com</link>
     <description>Radio things</description>
-    <pubDate>Sat, 30 Dec 2017 10:36:00 -0500</pubDate>
-    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <pubDate>Sat, 30 Dec 2017 10:36:00 +0000</pubDate>
+    <generator>Eleventy - https://www.11ty.dev</generator>
     <language>en</language>
     <item>
       <title>Ah, 2017, what a year...</title>
       <link>https://KD2MZG.com/articles/2017-12-30-goals/</link>
-      <pubDate>Sat, 30 Dec 2017 10:36:00 -0500</pubDate>
+      <pubDate>Sat, 30 Dec 2017 10:36:00 +0000</pubDate>
       <guid isPermaLink="true">https://KD2MZG.com/articles/2017-12-30-goals/</guid>
-      <author></author>
       <description>&lt;p&gt;The end of this crazy year has finally come. What a ride. This year, I have a few accomplishments of note:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Technician amateur radio license&lt;/li&gt;
@@ -38,9 +37,8 @@
     <item>
       <title>SDR with Ubuntu</title>
       <link>https://KD2MZG.com/articles/2017-11-04-sdr-ubuntu/</link>
-      <pubDate>Sat, 04 Nov 2017 18:36:00 -0400</pubDate>
+      <pubDate>Sat, 04 Nov 2017 18:36:00 +0000</pubDate>
       <guid isPermaLink="true">https://KD2MZG.com/articles/2017-11-04-sdr-ubuntu/</guid>
-      <author></author>
       <description>&lt;p&gt;Useful links and notes from installing SDR tools on Ubuntu. Focused on the HackRF and RTL-SDR USB dongles.&lt;/p&gt;
 &lt;h2 id=&quot;hackrf&quot;&gt;HackRF&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/mossmann/hackrf/tree/master/host&quot;&gt;https://github.com/mossmann/hackrf/tree/master/host&lt;/a&gt;&lt;/p&gt;
@@ -103,16 +101,19 @@ sudo make install
 sudo ldconfig
 # should now show RTL-SDR device if connected
 SoapySDRUtil --probe
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;flatpack&quot;&gt;flatpack&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;flatpack&quot;&gt;flatpack&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak
 wget https://sdk.gnome.org/keys/gnome-sdk.gpg
 sudo flatpak remote-add --gpg-import=gnome-sdk.gpg gnome https://sdk.gnome.org/repo/
 flatpak install --bundle CubicSDR-0.2.0.flatpak
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;to run&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;to run&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;flatpak run com.cubicsdr.App
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;gqrx&quot;&gt;GQRX&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;gqrx&quot;&gt;GQRX&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://gqrx.dk/download/install-ubuntu&quot;&gt;http://gqrx.dk/download/install-ubuntu&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo add-apt-repository -y ppa:bladerf/bladerf
 sudo add-apt-repository -y ppa:ettusresearch/uhd
@@ -123,14 +124,14 @@ sudo apt-get update
 sudo apt-get install gqrx-sdr
 sudo apt-get install libvolk1-bin
 volk_profile
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     <item>
       <title>Listening</title>
       <link>https://KD2MZG.com/articles/2017-04-01-listening/</link>
-      <pubDate>Sat, 01 Apr 2017 18:36:00 -0400</pubDate>
+      <pubDate>Sat, 01 Apr 2017 18:36:00 +0000</pubDate>
       <guid isPermaLink="true">https://KD2MZG.com/articles/2017-04-01-listening/</guid>
-      <author></author>
       <description>&lt;p&gt;I recently earned my technicians license and immediately purchased my new shiny callsign as a domain name. Currently, I’m not so much making QSO’s as much as listening to familiarize myself with NYC area repeaters.&lt;/p&gt;
 &lt;p&gt;I intend to post what I learn as a ham in this space, which, so far, is how to build software from source on Linux machines and the trials of programming various radios ;)&lt;/p&gt;
 </description>

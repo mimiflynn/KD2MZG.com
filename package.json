@@ -1,13 +1,14 @@
 {
-  "dependencies": {
-    "moment": "^2.20.1",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x"
-  },
-  "private": "true",
+  "private": true,
+  "type": "module",
   "scripts": {
     "clean": "rm -rf docs",
-    "dev": "wintersmith preview",
-    "build": "npm run clean && wintersmith build && mv build docs && cp CNAME docs/CNAME"
+    "dev": "eleventy --serve",
+    "build": "npm run clean && eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "markdown-it": "^15.0.3",
+    "typogr": "^0.6.8"
   }
 }
